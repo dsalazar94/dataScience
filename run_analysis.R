@@ -72,7 +72,7 @@ name.new <- gsub("-std-", "_StandardDeviation_", name.new)
 name.new <- gsub("-", "_", name.new)
 names(data.sub) <- name.new
 
-####---- 4.  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+####---- 5.  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 data.tidy <- aggregate(data.sub[,3:81], by = list(activity = data.sub$activity, subject = data.sub$subject),FUN = mean)
 write.table(x = data.tidy, file = "data_tidy.txt", row.names = FALSE)
