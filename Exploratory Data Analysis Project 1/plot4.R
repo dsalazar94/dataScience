@@ -19,6 +19,6 @@ with(household, {
        ylab="Global Rective Power (kilowatts)",xlab="")
 })
 
-png("plot4.png", width=480, height=480)
+dev.copy(png, file="plot4.png", height=480, width=480)
 
 dev.off()
