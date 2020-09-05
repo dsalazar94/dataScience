@@ -47,13 +47,18 @@ household$dateTime <- as.POSIXct(dateTime)
 
 hist(household$Global_active_power, main="Global Active Power", xlab = "Global Active Power (kilowatts)", col="red")
 
+png("plot1.png", width=480, height=480)
+
 dev.off()
 
 ## Plot 2
 
 plot(household$Global_active_power~household$dateTime, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 
+png("plot2.png", width=480, height=480)
+
 dev.off()
+
 
 ## Plot 3
 
@@ -65,6 +70,8 @@ with(household, {
 })
 legend("topright", col=c("black", "red", "blue"), lwd=c(1,1,1), 
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+
+png("plot3.png", width=480, height=480)
 
 dev.off()
 
@@ -85,6 +92,8 @@ with(household, {
   plot(Global_reactive_power~dateTime, type="l", 
        ylab="Global Rective Power (kilowatts)",xlab="")
 })
+
+png("plot4.png", width=480, height=480)
 
 dev.off()
 
